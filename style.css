@@ -8,12 +8,15 @@ body {
     font-family: 'Lato', sans-serif;
   }
 
+nav li{
+  display: inline;
+}
 
-  nav a { 
-    padding: 0 32px;
+  nav li a { 
+    padding: 0 10px;
     color: rgb(49, 45, 45);
-    font-size: 1.5rem;
-    text-decoration: none
+    font-size: 1.1rem;
+    text-decoration: none;
   }
   
 
@@ -39,4 +42,10 @@ body {
     justify-content: center;
     text-align: center;
     margin: 80px
+}
+
+@media screen and (max-width:599px) {
+  #container {
+    font-size: 35px;
+  }
 }
