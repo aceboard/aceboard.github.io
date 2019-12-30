@@ -1,35 +1,407 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Raleway', sans-serif;
     font-size: 10px;
+    color: #333;
+    background-color: white;
+  }
+
+  .container{
+      width: 1130px;
+      margin: 0 auto;
+  }
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    height: 80px;
 }
 
-.logo{
-    width:100px;
-    margin: 0 40px;
+.logo {
+    width: 120px;
 }
 
-
-.navbar {
+.navbar ul{
+    color: #333;;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.navbar li {
+    list-style: none;
+    font-size: 0.9rem;
+}
+.navbar li > a {
     text-decoration: none;
-    color:  #333;
-    font-size: 0.8rem;
-    margin: 0 10px;
+    color: #333;
 }
 
-.navbar:hover {
+.navbar li > a:hover {
     color: black;
     font-weight: 700;
+    transition: 0.9s;
 }
 
-.page {
-   width: 1200px;
-   margin: 0 auto;
+.navbar ul > li > ul.dropdown{
+    min-width: 10%; /* Set width of the dropdown */
+    background: white;
+    display: none;
+    position: absolute;
+    z-index: 999;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
 }
+
+.navbar ul > li:hover > ul.dropdown{
+    display: block;	/* Display the dropdown */
+
+}
+
+.navbar ul > li > ul.dropdown li {
+    display: block;
+    transition: 0.9s;
+}
+.navbar ul > li > ul.dropdown li.first-item {
+    display: block;
+    margin-top: 8px;
+}
+.navbar ul > li > ul.dropdown li.last-item {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.navbar ul > li > a.active {
+    border-bottom: 2.3px solid red;
+}
+
+.locations {
+    margin-left: 20px;
+}
+
+.travelcart {
+    margin-left: 20px;
+}
+
+.membership {
+    margin-left: 25px;
+}
+.membership a:hover {
+    cursor: pointer;
+}
+
+.button {
+    height: 35px;
+    border: 3px solid black;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    background-color: black;
+    border-radius: 40px;
+    padding: 8px;
+}
+
 
 .landing {
-    font-size: 50px;
-    font-weight: 900;
+    height: 88vh;
+    margin: 0 auto; 
     color: red;
-    text-align: center;
-    padding: 150px;
+    font-size: 4rem;;
+    font-weight: 900;
+    position: relative;
 }
+
+
+.landing p {
+    margin: 0;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.locations-container{
+     height: 80vh;
+}
+
+.experiences-container{
+    height: 140vh;
+}
+
+.center-description{
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    letter-spacing: 0.17em;
+}
+
+.center-caption {
+    font-size: 1.1rem;
+    font-weight: thin;
+    text-align: center;
+    color:  #a9a9a9;
+    letter-spacing: 0.08em;
+
+}
+
+.card-grid-container {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+  }
+  
+  .card-grid {
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    flex-wrap: wrap;
+  }
+  
+  .locations-grid-item {
+    border: 0.1rem #a9a9a9;
+    width: 170px;
+    height: 210px;
+    border-radius: 8px;
+  }
+
+  .locations-grid-item img{
+    border-radius: 8px;
+  }
+
+  .location-name {
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.5rem;
+  }
+
+  .experiences-grid-item {
+    width: 208px;
+    height: 380px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+  }
+
+  .experiences-grid-item img{
+    border-radius: 8px;
+  }
+
+  .footer-container {
+      background: #56616A;
+      height: 30vh;
+  }
+
+  .footer-grid {
+    display: flex;
+    justify-content: space-around;
+    background: #56616A;
+}
+
+.logo-footer {
+    width: 170px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.caption-footer {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px 40px;
+    letter-spacing: 0.1rem;
+}
+
+.footer-item ul{
+    margin-top: 20px;
+    list-style: none;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer-item li{
+    padding: 1px;
+}
+.footer-item .heading {
+    color: white;
+    font-weight: 800;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.7rem;
+    color: white;
+}
+
+.about-container {
+    height: 450vh;
+
+}
+
+.about-description {
+    width: 1000px;
+    display: block;
+    justify-content: center;
+    text-align: left;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.about-description > p{
+    padding: 10px;
+    letter-spacing: 0.1rem;
+    line-height: 1.7rem;
+}
+
+.about-description ul{
+    list-style: none;
+    margin-top: 1.8rem;
+}
+
+.about-description > ul > p{
+    list-style: none;
+    padding: 5px 0 17px 0;
+}
+
+.about-description-caption {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 400;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.center-caption-introduction {
+    justify-content: center;
+    margin: 0 auto;
+    width: 650px;
+    margin-top: 7px;
+    font-size: 1.1rem;
+    font-weight: thin;
+    text-align: center;
+    color:  #a9a9a9;
+    letter-spacing: 0.08em;
+
+}
+
+.size-1 img {
+    padding: 20px 0;
+    justify-content: center;
+    width: 100%;
+}
+
+.about-introduction {
+    margin-top: 40px;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.17em;
+    background-color: #D6E9FE;
+}
+
+.about-heading{
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.17em;
+}
+
+.about-heading-caption {
+    font-size: 1.1rem;
+    font-weight: thin;
+    text-align: center;
+    color:  #a9a9a9;
+    letter-spacing: 0.08em;
+    padding-top: 10px;
+
+}
+
+.about-value {
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 0.17em;
+}
+
+.about-blog {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 0 10px 0;
+    letter-spacing: 0.17em;
+}
+
+.about-join{
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 0 40px 0;
+    letter-spacing: 0.17em;
+}
+.about-join-caption {
+    font-size: 1.3rem;
+    font-style: italic;
+    font-weight: 400;
+    color: green;
+    margin-bottom: 15px;
+}
+
+.membership-button a{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 30px;
+    margin: 0 auto;
+    background: red;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 10px;
+    width: 200px;
+    border-radius: 7px;
+}
+
+.experience-category{
+    font-size: 0.71rem;
+    font-weight: 700;
+    color: #a9a9a9;
+    padding: 0.1rem;
+}
+
+.experience-name{
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.1rem;
+}
+
+.experience-price{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #a9a9a9;
+    padding: 0.2rem;
+}
+
+.experience-rating{
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: green;
+    padding: 0.2rem;
+}
+
+background-color: #D6E9FE;
